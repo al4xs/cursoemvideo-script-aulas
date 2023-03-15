@@ -9,15 +9,36 @@
         body {
             font: normal 40pt Arial;
             text-align: center;
-            background-color: rgb(15, 15, 15);
-            color: white;   
+            background-color: rgb(27, 29, 46);
+            color: rgb(255, 255, 255);   
         }
-
+    
     </style>
 </head>
-    <br/><br/><br/>
+
+<body>
+    <div id="area"> 
+        Interaja . . . 
+    </div>
+
     <script>
-        document.write(`ola`)
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        
+        function clicar() {
+            a.innerText = 'clicou'
+            a.style.background = 'red'
+        }
+        function entrar() {
+            a.innerText = 'Entrou'
+            a.style.background = 'green'
+        }
+        function sair() {
+            a.innerText = 'Saiu'
+            a.style.background = "yellow"
+        }
     </script>
 </body>
 </html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+    <style>
+        body {
+            font: normal 18pt Fira Code Light;
+            text-align: center;
+            background-color: rgb(23, 39, 65);
+            color: rgb(255, 255, 255);
+        }
+        div#res {
+            margin-top: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Sistema de multa</h1>
+    Velocidade do carro :<input type="number" name="n1" id="n1">
+    <input type="button" onclick="clicar()" value="Pesquisar">
+    <div id="res"></div>
+    <script>
+        function clicar() {
+            var vel = window.document.getElementById('n1') 
+            if (vel.value >= 60) { //condição simples!
+                res.innerHTML = 'Você ultrapassou a velocidade e foi multado'
+            } else {
+                res.innerHTML = 'Você não foi multado, continue assim'
+            }
+
+            var vel1 = window.document.getElementById('n1') //armazenando para limpar
+
+            if (vel1.value =! ""){
+                vel1.value = "";
+            }
+        }
+    </script>
+</body>
+</html>
